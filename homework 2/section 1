@@ -1,0 +1,15 @@
+# 导入符号计算基础库
+using TyBase  
+# 导入数学运算扩展库
+using TyMath  
+# 导入符号数学工具库
+using TySymbolicMath
+
+# 声明符号变量x
+@variables x
+
+# 定义函数 y1 = sin³(x) - cos(3x)
+y1 = (sin(x))^3 - cos(3*x)
+
+# 计算y1对x的导数并自动简化结果
+derivative(y1, x, simplify=true)
