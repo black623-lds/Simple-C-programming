@@ -1,0 +1,17 @@
+using TyBase
+using TyMath
+using TySymbolicMath
+
+@variables x
+
+# 定义函数 f(x) = eˣ·tan(x)
+f(x) = exp(x)*tan(x)
+
+# 创建四阶微分算子
+Dx4 = Differential(x)^4
+
+# 应用微分算子计算四阶导数
+Df4 = Dx4(f(x))
+
+# 展开微分表达式显示完整形式
+expand_derivatives(Df4)
