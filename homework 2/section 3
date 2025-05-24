@@ -1,0 +1,17 @@
+using TyBase
+using TyMath
+using TySymbolicMath
+
+@variables x
+
+# 定义函数 f(x) = x²·sin(2x)
+f(x) = x^2*sin(2x)
+
+# 创建20阶微分算子
+Dx20 = Differential(x)^20
+
+# 计算20阶导数表达式
+Df20 = Dx20(f(x))
+
+# 展开高阶微分结果
+expand_derivatives(Df20)
