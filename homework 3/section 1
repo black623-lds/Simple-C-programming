@@ -1,0 +1,35 @@
+using TyBase
+
+using TyPlot
+
+using TyMath 
+
+x=[0,1,2,3,4] 
+
+y=[0,1,2,3,4] 
+
+z=[4 0 -4 0 4 
+
+   3 2 -2 2 3
+
+   2 1  0 1 2
+
+   3 2 -2 2 3
+
+   4 0 -4 0 4]  
+
+subplot(1,2,1)  
+
+mesh(x,y,z)    
+
+x1=0:0.1:4
+
+y1=0:0.1:4      
+
+x2,y2=meshgrid2(x1,y1)  
+
+z1=interp2(x,y,z,x2,y2,"cubic")  
+
+subplot(1,2,2)      
+
+mesh(x1,y1,z1)    
